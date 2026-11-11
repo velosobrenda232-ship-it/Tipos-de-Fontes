@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estilos da fonte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@600&family=Dancing+Script:wght@600&family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Estilos da fonte</h1>
+  <p class="intro">Estilos da fonte da escrita da sua MARCA!</p>
+
+  <div class="tool">
+    <label for="brand">Nome da marca:</label>
+    <input id="brand" type="text" value="Minha Marca" maxlength="40" autocomplete="off">
+  </div>
+
+  <ol>
+    <li>
+      <h2>Com Serifa</h2>
+      <div class="specimen"><span class="sample serif">Minha Marca</span>
+        <label class="replace">Trocar por imagem<input type="file" accept="image/*"></label></div>
+    </li>
+    <li>
+      <h2>Sem Serifa</h2>
+      <div class="specimen"><span class="sample sans">Minha Marca</span>
+        <label class="replace">Trocar por imagem<input type="file" accept="image/*"></label></div>
+    </li>
+    <li>
+      <h2>Manuscrita</h2>
+      <div class="specimen"><span class="sample script">Minha Marca</span>
+        <label class="replace">Trocar por imagem<input type="file" accept="image/*"></label></div>
+    </li>
+    <li>
+      <h2>Decorada</h2>
+      <div class="specimen"><span class="sample deco">Minha Marca</span>
+        <label class="replace">Trocar por imagem<input type="file" accept="image/*"></label></div>
+    </li>
+  </ol>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

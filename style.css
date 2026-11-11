@@ -1,0 +1,68 @@
+  :root {
+    --bg: #ffffff;
+    --text: #37352f;
+    --muted: #9b9a97;
+    --border: #e9e9e7;
+    --card: #f7f6f3;
+    --accent: #2383e2;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #191919; --text: #ffffffcf; --muted: #7f7f7f;
+      --border: #2f2f2f; --card: #252525; --accent: #529cca;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #191919; --text: #ffffffcf; --muted: #7f7f7f;
+    --border: #2f2f2f; --card: #252525; --accent: #529cca;
+    color-scheme: dark;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 900px; margin: 0 auto; padding: 72px 24px 120px; }
+  h1 { font-size: 2.5rem; line-height: 1.2; margin: 0 0 24px; font-weight: 700; }
+  .intro { font-size: 1.05rem; margin: 0 0 28px; }
+  .tool {
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+    padding: 12px 14px; margin-bottom: 32px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  }
+  .tool label { color: var(--muted); font-size: .9rem; }
+  .tool input {
+    flex: 1 1 200px; padding: 8px 10px; font: inherit; color: inherit;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  }
+  .tool input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  ol { margin: 0; padding: 0; list-style: none; counter-reset: item; }
+  li { counter-increment: item; margin-bottom: 36px; }
+  li h2 { font-size: 1.05rem; font-weight: 500; margin: 0 0 12px; }
+  li h2::before { content: counter(item) ". "; }
+  .specimen {
+    position: relative; min-height: 180px; padding: 32px 20px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden;
+  }
+  .specimen .sample { font-size: clamp(2rem, 7vw, 3.5rem); line-height: 1.15; word-break: break-word; }
+  .specimen img { max-width: 100%; max-height: 360px; border-radius: 4px; }
+  .serif { font-family: "Playfair Display", Georgia, "Times New Roman", serif; font-weight: 600; }
+  .sans { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-weight: 600; letter-spacing: .02em; }
+  .script { font-family: "Dancing Script", "Brush Script MT", cursive; font-weight: 600; }
+  .deco { font-family: "Lobster", Impact, fantasy; }
+  .replace {
+    position: absolute; top: 8px; right: 8px; font-size: .75rem; cursor: pointer;
+    padding: 4px 8px; border-radius: 4px; color: var(--muted);
+    background: var(--bg); border: 1px solid var(--border);
+  }
+  .replace:hover { color: var(--text); }
+  .replace input { display: none; }
+  @media (max-width: 600px) { main { padding-top: 40px; } h1 { font-size: 2rem; } }
